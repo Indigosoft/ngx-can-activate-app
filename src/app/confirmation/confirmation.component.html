@@ -1,0 +1,21 @@
+<mat-toolbar color="warn">
+    <mat-toolbar-row>
+        <h1 class="mat-h1 full-size">Can Activate Angular</h1>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <h2 class="mat-h2 full-size">Confirmation activation of application before load</h2>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <div class="full-size">
+            <ng-container *ngIf="!deactivated; then activatedTemplate else deactivatedTemplate"></ng-container>
+            <ng-template #activatedTemplate>
+                <button mat-raised-button (click)="onActivate()">Activate</button>
+                <button mat-button (click)="onAbort()">Abort</button>
+            </ng-template>
+            <ng-template #deactivatedTemplate>
+                <button mat-button (click)="onReload()">Reload!</button>
+            </ng-template>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+

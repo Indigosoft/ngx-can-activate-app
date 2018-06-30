@@ -1,0 +1,6 @@
+<ng-container *ngFor="let example of examples">
+    <h2 class="mat-h2">{{ example.title }}</h2>
+    <p>{{ example.description }}</p>
+    <pre><code class="mat-elevation-z2" highlight [code]="example.code"
+               [language]="[example.language]"></code></pre>
+</ng-container>

@@ -1,0 +1,43 @@
+h1 {
+    font-weight: 300;
+    margin: 0;
+    padding: 28px 8px;
+    font-size: 20px;
+}
+
+.mat-toolbar {
+    padding: 60px 20px;
+}
+
+.mat-toolbar-row {
+    text-align: center;
+}
+
+.full-size {
+    width: 100%;
+}
+
+.mat-h1 {
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 56px;
+    margin: 15px 5px;
+}
+
+.mat-h2 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 15px 0 25px;
+}
+
+.container {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+app-example {
+    max-width: 920px;
+}
