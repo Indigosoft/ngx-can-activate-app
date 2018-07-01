@@ -1,5 +1,8 @@
 # NgxCanActivateApp
 
+[![Can Activate Angular](https://raw.githubusercontent.com/IndigoSoft/ngx-can-activate-app/master/media/preview.png)](https://ngx-can-activate-app-demo.stackblitz.io/)
+
+
 ## 1. Install ngx-can-activate-app
 
 ```bash
