@@ -13,7 +13,6 @@ import { ConfirmationService } from './confirmation.service';
         NgxCanActivateAppModule.forRoot({ component: ConfirmationComponent })
     ],
     declarations: [ ConfirmationComponent ],
-    entryComponents: [ ConfirmationComponent ],
     providers: [ ConfirmationService ]
 })
 export class ConfirmationModule {}

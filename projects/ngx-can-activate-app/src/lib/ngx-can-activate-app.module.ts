@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, ApplicationRef, ComponentFactory, ComponentFactoryResolver, ComponentRef, Injector, ModuleWithProviders, NgModule } from '@angular/core';
+import { ANALYZE_FOR_ENTRY_COMPONENTS, APP_INITIALIZER, ApplicationRef, ComponentFactory, ComponentFactoryResolver, ComponentRef, Injector, ModuleWithProviders, NgModule } from '@angular/core';
 import { NGX_CAN_ACTIVATE_APP_CONFIG, NgxActivateAppInitializer, NgxCanActivateAppConfig, NgxCanActivateAppNodeConfig, NgxCanActivateAppSelectorConfig } from './ngx-can-activate-app.config';
 import { NgxCanActivateApp } from './ngx-can-activate-app.service';
 
@@ -33,8 +33,8 @@ export class NgxCanActivateAppModule {
         return {
             ngModule: NgxCanActivateAppModule,
             providers: [
-                NgxCanActivateApp,
-                NgxActivateAppInitializer,
+                NgxActivateAppInitializer, NgxCanActivateApp,
+                { provide: ANALYZE_FOR_ENTRY_COMPONENTS, useValue: [ config.component ], multi: true },
                 { provide: NGX_CAN_ACTIVATE_APP_CONFIG, useValue: config },
                 {
                     provide: APP_INITIALIZER, useFactory: canActivateAppModule,

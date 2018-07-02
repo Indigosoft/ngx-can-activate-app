@@ -33,11 +33,10 @@ export class ConfirmationComponent {
     },
     {
         title: 'Declare component',
-        description: 'Add your component to declarations and entryComponents',
+        description: 'Add your component to declarations',
         language: 'typescript', code: `
 @NgModule({
   declarations: [ AppComponent, ConfirmationComponent ],
-  entryComponents: [ ConfirmationComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
@@ -56,7 +55,6 @@ import { NgxCanActivateAppModule } from 'ngx-can-activate-app';
     })
   ],
   declarations: [ AppComponent, ConfirmationComponent ],
-  entryComponents: [ ConfirmationComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}

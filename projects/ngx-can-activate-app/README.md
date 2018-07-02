@@ -30,12 +30,11 @@ export class ConfirmationComponent {
 
 ## 3. Declare component
 
-Add your component to declarations and entryComponents
+Add your component to declarations
 
 ```typescript
 @NgModule({
   declarations: [ AppComponent, ConfirmationComponent ],
-  entryComponents: [ ConfirmationComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
@@ -55,7 +54,6 @@ import { NgxCanActivateAppModule } from 'ngx-can-activate-app';
     })
   ],
   declarations: [ AppComponent, ConfirmationComponent ],
-  entryComponents: [ ConfirmationComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
