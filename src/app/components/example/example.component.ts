@@ -9,14 +9,14 @@ interface Example {
 
 const EXAMPLES: Example[] = [
     {
-        title: 'Install package ngx-can-activate-app',
+        title: 'Install ngx-can-activate-app',
         language: 'bash', code: `
 npm i -s ngx-can-activate-app
 `
     },
     {
-        title: 'Create pre-activation component',
-        description: 'The component will be displayed before the application is activated',
+        title: 'Create a component',
+        description: 'It will be displayed until your application has finished activating.',
         language: 'typescript', code: `
 import { NgxCanActivateApp } from 'ngx-can-activate-app';
 
@@ -32,8 +32,8 @@ export class ConfirmationComponent {
 `
     },
     {
-        title: 'Declare component',
-        description: 'Add your component to declarations',
+        title: 'Declare the component',
+        description: 'Add it to declarations.',
         language: 'typescript', code: `
 @NgModule({
   declarations: [ AppComponent, ConfirmationComponent ],
@@ -43,8 +43,8 @@ export class AppModule {}
 `
     },
     {
-        title: 'Import module and setup component',
-        description: 'You first must initialize the module with the component',
+        title: 'Import NgxCanActivateAppModule',
+        description: `Then add your component to the module's initialization.`,
         language: 'typescript', code: `
 import { NgxCanActivateAppModule } from 'ngx-can-activate-app';
 
@@ -61,8 +61,8 @@ export class AppModule {}
 `
     },
     {
-        title: 'Setup selector to index.html',
-        description: 'Add selector of the component to index.html file',
+        title: 'Specify a selector in index.html',
+        description: 'Add the selector of your component to index.html.',
         language: 'haml', code: `
 <!doctype html>
 <html lang="en">

@@ -1,16 +1,29 @@
 import { Injectable } from '@angular/core';
-import { NgxActivateAppInitializer } from './ngx-can-activate-app.config';
+import { AsyncSubject, Observable } from 'rxjs';
+
+export interface ActivateEvent {
+    activated: boolean;
+    reason?: string;
+}
 
 @Injectable()
 export class NgxCanActivateApp {
 
-    constructor(private activate$: NgxActivateAppInitializer) {}
+    private activate$: AsyncSubject<ActivateEvent> = new AsyncSubject<ActivateEvent>();
 
-    activate() { this.emit({ activated: true }); }
+    activate(): void {
+        this.emit({ activated: true });
+    }
 
-    abort(reason: string) { this.emit({ activated: false, reason }); }
+    abort(reason: string): void {
+        this.emit({ activated: false, reason });
+    }
 
-    private emit(event: any) {
+    getActivate(): Observable<ActivateEvent> {
+        return this.activate$.asObservable();
+    }
+
+    private emit(event: ActivateEvent) {
         this.activate$.next(event);
         this.activate$.complete();
     }

@@ -13,9 +13,6 @@ export interface NgxCanActivateAppNodeConfig extends NgxCanActivateAppDefaultSel
     node: any;
 }
 
-@Injectable()
-export class NgxActivateAppInitializer extends AsyncSubject<{ activated: boolean; reason?: string }> {}
-
 export type NgxCanActivateAppConfig =
     NgxCanActivateAppDefaultSelectorConfig
     | NgxCanActivateAppSelectorConfig

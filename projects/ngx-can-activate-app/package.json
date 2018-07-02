@@ -1,7 +1,7 @@
 {
     "name": "ngx-can-activate-app",
-    "version": "0.0.1",
-    "description": "Confirmation activation of application before load for Angular 5, 6+",
+    "version": "0.0.3",
+    "description": "Confirming activation of Angular before it's loaded for Angular 5, 6+",
     "keywords": [
         "angular",
         "angular5",

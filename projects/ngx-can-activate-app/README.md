@@ -10,9 +10,9 @@ npm i -s ngx-can-activate-app
 ```
 
 
-## 2. Create pre-activation component
+## 2. Create component
 
-The component will be displayed before the application is activated
+It will be displayed until your application has finished activating.
 
 ```typescript
 import { NgxCanActivateApp } from 'ngx-can-activate-app';
@@ -28,9 +28,9 @@ export class ConfirmationComponent {
 }
 ```
 
-## 3. Declare component
+## 3. Declare the component
 
-Add your component to declarations
+Add it to declarations.
 
 ```typescript
 @NgModule({
@@ -40,9 +40,9 @@ Add your component to declarations
 export class AppModule {}
 ```
 
-## 4. Import module and setup component
+## 4. Import NgxCanActivateAppModule
 
-You first must initialize the module with the component
+Then add your component to the module's initialization.
 
 ```typescript
 import { NgxCanActivateAppModule } from 'ngx-can-activate-app';
@@ -59,9 +59,9 @@ import { NgxCanActivateAppModule } from 'ngx-can-activate-app';
 export class AppModule {}
 ```
 
-## 5. Setup selector to index.html
+## 5. Specify a selector in index.html
 
-Add selector of the component to index.html file
+Add the selector of your component to index.html.
 
 ```html
 <!doctype html>
